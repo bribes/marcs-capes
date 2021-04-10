@@ -19,9 +19,9 @@
 		</tr>
 		<tbody id="myTable"></tbody>
 	</table>
-		<center><img width="500" height="667" src="https://user-images.githubusercontent.com/52789876/114279105-f241ad00-9a00-11eb-9713-6000f133614f.jpg"></center>
+		<center><img width="500" height="667" src="https://user-images.githubusercontent.com/52789876/114279105-f241ad00-9a00-11eb-9713-6000f133614f.jpg"></center> //Image of Marc
 	<script>
-	$.getJSON('https://www.faav.tk/v1/namemc/capes?username=Marc', function(data123) {
+	$.getJSON('https://www.faav.tk/v1/namemc/capes?username=Marc', function(data123) { //API URL https://www.faav.tk/v1/namemc/capes?username=Marc
 	   
 	   buildTable(data123)
 
@@ -32,7 +32,7 @@
 
 	       for (var i = 0; i < data.length; i++){
 	           var row = `<tr>
-	                           <td>${data[i].name}<\/td>
+	                           <td>${data[i].name}<\/td> // change .name to the json data you want.
 	                     <\/tr>`
 	           table.innerHTML += row
 
