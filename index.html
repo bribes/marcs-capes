@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	   th{ 
+	       color:#fff;
+	           }
+	</style>
+	<title></title>
+</head>
+<body>
+	<table class="table table-striped">
+		<tr class="bg-info">
+			<th>Marc's Capes</th>
+		</tr>
+		<tbody id="myTable"></tbody>
+	</table>
+	<script>
+	$.getJSON('https://www.faav.tk/v1/namemc/capes?username=Marc', function(data123) {
+	   
+	   buildTable(data123)
+
+
+
+	   function buildTable(data){
+	       var table = document.getElementById('myTable')
+
+	       for (var i = 0; i < data.length; i++){
+	           var row = `<tr>
+	                           <td>${data[i].name}<\/td>
+	                     <\/tr>`
+	           table.innerHTML += row
+
+
+	       }
+	   }
+	}
+	)
+	</script>
+</body>
+</html>
